@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:a="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    a:layout_width="match_parent"
+    a:layout_height="match_parent"
+    a:screenOrientation="portrait"
+    tools:context=".MainActivity">
+    <LinearLayout
+        a:layout_width="match_parent"
+        a:layout_height="match_parent"
+        a:orientation="vertical"
+        a:background="#171B1A"
+        a:padding="10dp">
+        <LinearLayout
+            a:layout_width="match_parent"
+            a:layout_height="wrap_content"
+            a:background="#009688"
+            a:layout_marginBottom="10dp">
+            <TextView a:text="@string/screenWithNumbers"
+                a:paddingTop="20dp"
+                a:paddingBottom="20dp"
+                a:layout_marginEnd="10dp"
+
+                a:layout_width="match_parent"
+                a:layout_height="wrap_content"
+                a:textSize="60sp"
+                a:textColor="@color/black"
+                a:textStyle="bold"
+                a:textDirection="firstStrongRtl"/>
+        </LinearLayout>
+
+        <TableLayout
+            a:layout_width="match_parent"
+            a:layout_height="match_parent"
+            a:stretchColumns="*">
+
+            <TableRow
+                a:layout_width="wrap_content"
+                a:layout_height="wrap_content"
+                a:layout_weight="1">
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/erase"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle"/>
+
+                <Button
+
+                    style="?android:attr/buttonBarButtonStyle"
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:layout_gravity="center"
+                    a:backgroundTint="@color/white"
+                    a:text="@string/changeSign"
+                    a:textColor="@color/black"
+                    a:textSize="45sp" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/percent"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/divide"
+                    a:textSize="45sp"
+                    a:backgroundTint="#F44336"
+                    a:textColor="@color/white"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </TableRow>
+
+            <TableRow
+                a:layout_width="match_parent"
+                a:layout_height="match_parent"
+                a:layout_weight="1">
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/seven"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/eight"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/nine"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/multiply"
+                    a:textSize="45sp"
+                    a:backgroundTint="#F44336"
+                    a:textColor="@color/white"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </TableRow>
+
+            <TableRow
+                a:layout_width="match_parent"
+                a:layout_height="match_parent"
+                a:layout_weight="1">
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/four"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/five"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/six"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/minus"
+                    a:textSize="45sp"
+                    a:backgroundTint="#F44336"
+                    a:textColor="@color/white"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </TableRow>
+
+            <TableRow
+                a:layout_width="match_parent"
+                a:layout_height="match_parent"
+                a:layout_weight="1">
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/one"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/two"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/three"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/plus"
+                    a:textSize="45sp"
+                    a:backgroundTint="#F44336"
+                    a:textColor="@color/white"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+            </TableRow>
+
+            <TableRow
+                a:layout_width="match_parent"
+                a:layout_height="match_parent"
+                a:layout_weight="1">
+
+                <Button
+                    style="?android:attr/buttonBarButtonStyle"
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:layout_span="2"
+                    a:layout_marginStart="3dp"
+                    a:layout_marginEnd="2dp"
+
+                    a:backgroundTint="@color/white"
+                    a:text="@string/zero"
+                    a:textColor="@color/black"
+                    a:textSize="45sp" />
+
+                <Button
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/point"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+                <Button
+
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
+                    a:text="@string/equals"
+                    a:textSize="45sp"
+                    a:backgroundTint="#F44336"
+                    a:textColor="@color/white"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle" />
+
+            </TableRow>
+
+
+        </TableLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
