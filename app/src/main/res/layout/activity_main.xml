@@ -6,28 +6,54 @@
     a:layout_height="match_parent"
     a:screenOrientation="portrait"
     tools:context=".MainActivity">
+
     <LinearLayout
         a:layout_width="match_parent"
         a:layout_height="match_parent"
         a:orientation="vertical"
         a:background="#171B1A"
+        a:minHeight="0dp"
+        a:minWidth="0dp"
         a:padding="10dp">
+
         <LinearLayout
             a:layout_width="match_parent"
             a:layout_height="wrap_content"
             a:background="#009688"
-            a:layout_marginBottom="10dp">
-            <TextView a:text="@string/screenWithNumbers"
-                a:paddingTop="20dp"
-                a:paddingBottom="20dp"
-                a:layout_marginEnd="10dp"
+            a:layout_marginBottom="10dp"
+            a:orientation="vertical">
 
+            <EditText
+                a:id="@+id/expressionViewDisplay"
                 a:layout_width="match_parent"
                 a:layout_height="wrap_content"
+                a:paddingTop="20dp"
+                a:paddingBottom="20dp"
+                a:clickable="false"
+                a:cursorVisible="false"
+                a:focusable="false"
+                a:gravity="end"
+                a:singleLine="true"
+                a:textSize="17sp"
+                a:textColor="@color/black"
+                a:textStyle="bold"
+                a:importantForAutofill="no" />
+            <EditText
+                a:id="@+id/numberViewDisplay"
+                a:text="@string/screenWithNumbers"
+                a:layout_width="match_parent"
+                a:layout_height="wrap_content"
+                a:paddingTop="20dp"
+                a:paddingBottom="20dp"
+                a:clickable="false"
+                a:cursorVisible="false"
+                a:focusable="false"
+                a:gravity="end"
+                a:singleLine="true"
                 a:textSize="60sp"
                 a:textColor="@color/black"
                 a:textStyle="bold"
-                a:textDirection="firstStrongRtl"/>
+                a:importantForAutofill="no" />
         </LinearLayout>
 
         <TableLayout
@@ -43,12 +69,24 @@
                 <Button
                     a:layout_width="match_parent"
                     a:layout_height="match_parent"
+                    a:text="CE"
+                    a:textSize="45sp"
+                    a:backgroundTint="@color/white"
+                    a:textColor="@color/black"
+                    a:layout_gravity="center"
+                    style="?android:attr/buttonBarButtonStyle"
+                    a:onClick="clearBtnClick"/>
+                <Button
+                    a:id="@+id/clearBtn"
+                    a:layout_width="match_parent"
+                    a:layout_height="match_parent"
                     a:text="@string/erase"
                     a:textSize="45sp"
                     a:backgroundTint="@color/white"
                     a:textColor="@color/black"
                     a:layout_gravity="center"
-                    style="?android:attr/buttonBarButtonStyle"/>
+                    style="?android:attr/buttonBarButtonStyle"
+                    a:onClick="fullResetBtnClick"/>
 
                 <Button
 
@@ -59,17 +97,19 @@
                     a:backgroundTint="@color/white"
                     a:text="@string/changeSign"
                     a:textColor="@color/black"
-                    a:textSize="45sp" />
-
-                <Button
-                    a:layout_width="match_parent"
-                    a:layout_height="match_parent"
-                    a:text="@string/percent"
                     a:textSize="45sp"
-                    a:backgroundTint="@color/white"
-                    a:textColor="@color/black"
-                    a:layout_gravity="center"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    a:onClick="changeSign"/>
+
+<!--                <Button-->
+<!--                    a:layout_width="match_parent"-->
+<!--                    a:layout_height="match_parent"-->
+<!--                    a:text="@string/percent"-->
+<!--                    a:textSize="45sp"-->
+<!--                    a:backgroundTint="@color/white"-->
+<!--                    a:textColor="#80000000"-->
+<!--                    a:layout_gravity="center"-->
+<!--                    a:enabled="false"-->
+<!--                    style="?android:attr/buttonBarButtonStyle" />-->
 
                 <Button
                     a:layout_width="match_parent"
@@ -79,6 +119,7 @@
                     a:backgroundTint="#F44336"
                     a:textColor="@color/white"
                     a:layout_gravity="center"
+                    a:onClick="operationBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
             </TableRow>
 
@@ -95,6 +136,7 @@
                     a:backgroundTint="@color/white"
                     a:textColor="@color/black"
                     a:layout_gravity="center"
+                    a:onClick="numberBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
@@ -105,6 +147,7 @@
                     a:backgroundTint="@color/white"
                     a:textColor="@color/black"
                     a:layout_gravity="center"
+                    a:onClick="numberBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
@@ -115,6 +158,7 @@
                     a:backgroundTint="@color/white"
                     a:textColor="@color/black"
                     a:layout_gravity="center"
+                    a:onClick="numberBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
@@ -125,6 +169,7 @@
                     a:backgroundTint="#F44336"
                     a:textColor="@color/white"
                     a:layout_gravity="center"
+                    a:onClick="operationBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
             </TableRow>
 
@@ -141,6 +186,7 @@
                     a:backgroundTint="@color/white"
                     a:textColor="@color/black"
                     a:layout_gravity="center"
+                    a:onClick="numberBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
@@ -151,6 +197,7 @@
                     a:backgroundTint="@color/white"
                     a:textColor="@color/black"
                     a:layout_gravity="center"
+                    a:onClick="numberBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
@@ -161,6 +208,7 @@
                     a:backgroundTint="@color/white"
                     a:textColor="@color/black"
                     a:layout_gravity="center"
+                    a:onClick="numberBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
@@ -171,6 +219,7 @@
                     a:backgroundTint="#F44336"
                     a:textColor="@color/white"
                     a:layout_gravity="center"
+                    a:onClick="operationBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
             </TableRow>
 
@@ -187,6 +236,7 @@
                     a:backgroundTint="@color/white"
                     a:textColor="@color/black"
                     a:layout_gravity="center"
+                    a:onClick="numberBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
@@ -197,6 +247,7 @@
                     a:backgroundTint="@color/white"
                     a:textColor="@color/black"
                     a:layout_gravity="center"
+                    a:onClick="numberBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
@@ -207,6 +258,7 @@
                     a:backgroundTint="@color/white"
                     a:textColor="@color/black"
                     a:layout_gravity="center"
+                    a:onClick="numberBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
 
                 <Button
@@ -217,6 +269,7 @@
                     a:backgroundTint="#F44336"
                     a:textColor="@color/white"
                     a:layout_gravity="center"
+                    a:onClick="operationBtnClick"
                     style="?android:attr/buttonBarButtonStyle" />
 
             </TableRow>
@@ -232,33 +285,34 @@
                     a:layout_height="match_parent"
                     a:layout_span="2"
                     a:layout_marginStart="3dp"
-                    a:layout_marginEnd="2dp"
-
+                    a:layout_marginEnd="3dp"
                     a:backgroundTint="@color/white"
                     a:text="@string/zero"
                     a:textColor="@color/black"
+                    a:onClick="numberBtnClick"
                     a:textSize="45sp" />
 
                 <Button
+                    style="?android:attr/buttonBarButtonStyle"
                     a:layout_width="match_parent"
                     a:layout_height="match_parent"
-                    a:text="@string/point"
-                    a:textSize="45sp"
-                    a:backgroundTint="@color/white"
-                    a:textColor="@color/black"
                     a:layout_gravity="center"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    a:backgroundTint="@color/white"
+                    a:text="@string/point"
+                    a:textColor="@color/black"
+                    a:textSize="45sp"
+                    a:onClick="fractional"/>
 
                 <Button
-
+                    style="?android:attr/buttonBarButtonStyle"
                     a:layout_width="match_parent"
                     a:layout_height="match_parent"
-                    a:text="@string/equals"
-                    a:textSize="45sp"
-                    a:backgroundTint="#F44336"
-                    a:textColor="@color/white"
                     a:layout_gravity="center"
-                    style="?android:attr/buttonBarButtonStyle" />
+                    a:backgroundTint="#F44336"
+                    a:text="@string/equals"
+                    a:textColor="@color/white"
+                    a:onClick="resultBtnClick"
+                    a:textSize="45sp" />
 
             </TableRow>
 
